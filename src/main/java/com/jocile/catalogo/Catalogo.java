@@ -4,6 +4,8 @@
 
 package com.jocile.catalogo;
 
+import com.jocile.catalogo.view.Principal;
+
 /**
  *
  * @author joc
@@ -11,6 +13,6 @@ package com.jocile.catalogo;
 public class Catalogo {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        new Principal().setVisible(true);
     }
 }

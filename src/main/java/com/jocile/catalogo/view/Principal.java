@@ -48,6 +48,11 @@ public class Principal extends javax.swing.JFrame {
         mnArquivo.setText("Arquivo");
 
         mniAbrir.setText("Abrir");
+        mniAbrir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniAbrirActionPerformed(evt);
+            }
+        });
         mnArquivo.add(mniAbrir);
 
         jMenuBar1.add(mnArquivo);
@@ -63,20 +68,26 @@ public class Principal extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addComponent(painelDesktop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addComponent(painelDesktop)
+                .addGap(73, 73, 73))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(74, 74, 74)
-                .addComponent(painelDesktop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(painelDesktop)
+                .addGap(79, 79, 79))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void mniAbrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniAbrirActionPerformed
+        JanelaAbrir fabrir = new JanelaAbrir();
+        painelDesktop.add(fabrir);
+        fabrir.setVisible(true);
+    }//GEN-LAST:event_mniAbrirActionPerformed
 
     /**
      * @param args the command line arguments

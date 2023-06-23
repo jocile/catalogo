@@ -30,6 +30,7 @@ public class Principal extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         mnArquivo = new javax.swing.JMenu();
         mniAbrir = new javax.swing.JMenuItem();
+        mniBotaoRadio = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -54,6 +55,14 @@ public class Principal extends javax.swing.JFrame {
             }
         });
         mnArquivo.add(mniAbrir);
+
+        mniBotaoRadio.setText("Botão de Rádio");
+        mniBotaoRadio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniBotaoRadioActionPerformed(evt);
+            }
+        });
+        mnArquivo.add(mniBotaoRadio);
 
         jMenuBar1.add(mnArquivo);
 
@@ -88,6 +97,12 @@ public class Principal extends javax.swing.JFrame {
         painelDesktop.add(fabrir);
         fabrir.setVisible(true);
     }//GEN-LAST:event_mniAbrirActionPerformed
+
+    private void mniBotaoRadioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniBotaoRadioActionPerformed
+        JanelaRadio fabrir = new JanelaRadio();
+        painelDesktop.add(fabrir);
+        fabrir.setVisible(true);
+    }//GEN-LAST:event_mniBotaoRadioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -129,6 +144,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu mnArquivo;
     private javax.swing.JMenuItem mniAbrir;
+    private javax.swing.JMenuItem mniBotaoRadio;
     private javax.swing.JDesktopPane painelDesktop;
     // End of variables declaration//GEN-END:variables
 }
